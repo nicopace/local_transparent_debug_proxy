@@ -1,0 +1,4 @@
+As root:
+enable_traffic_dump.sh enables the capture of traffic (both http and https) as a transparent router.
+disable_traffic_dump.sh disables the capture or replay of traffic.
+replay_traffic_dump.sh replays a previous traffic captured session.
