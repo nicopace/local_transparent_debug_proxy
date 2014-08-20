@@ -19,5 +19,5 @@ echo $! > $PIDFILE
 
 # iptables-save > /tmp/working.iptables.rules
 
-iptables -t nat -I OUTPUT -m owner --uid-owner vagrant -p tcp --dport 80 -j REDIRECT --to-port 8080
-iptables -t nat -I OUTPUT -m owner --uid-owner vagrant -p tcp --dport 443 -j REDIRECT --to-port 8080
+iptables -t nat -I OUTPUT -m owner --uid-owner vagrant -p tcp ! -d 127.0.0.1 --dport 80 -j REDIRECT --to-port 8080
+iptables -t nat -I OUTPUT -m owner --uid-owner vagrant -p tcp ! -d 127.0.0.1 --dport 443 -j REDIRECT --to-port 8080
