@@ -3,7 +3,7 @@
 apt-get update
 
 #dependencies for mitmproxy
-apt-get -y install python-pip python-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev
+apt-get -y install python-pip python-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev iptables
 pip -v install mitmproxy
 
 # this rules redirect all local traffic done by user vagrant to the transparent proxy running at 8080
