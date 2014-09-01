@@ -1,4 +1,11 @@
-As root:
+mitmproxy runs as a user.
+The program being monitored as another user.
+Make sure to edit the sh commands so 'vagrant' user is replaced with the user which commands will be monitored.
+
+Steps to use this:
+* download the repo
+* install dependencies (sudo ./bootstrap.sh)
+* run as root:
 enable_traffic_dump.sh enables the capture of traffic (both http and https) as a transparent router.
 disable_traffic_dump.sh disables the capture or replay of traffic.
 replay_traffic_dump.sh replays a previous traffic captured session.
